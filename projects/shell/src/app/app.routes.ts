@@ -12,11 +12,11 @@ export const APP_ROUTES: Routes = [
       pathMatch: 'full'
     },
     {
-      path: 'flights',
+      path: 'cobranza',
       loadChildren: () => loadRemoteModule({
           remoteEntry: URL,
           remoteName: 'mfe1',
-          exposedModule: './Module'
+          exposedModule: './Collection'
         })
         .then(m => m.FlightsModule)
     },

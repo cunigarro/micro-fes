@@ -3,7 +3,7 @@ import { FlightsSearchComponent } from './flights-search/flights-search.componen
 
 export const FLIGHTS_ROUTES: Routes = [
     {
-      path: 'flights-search',
+      path: '',
       component: FlightsSearchComponent
     }
 ];
