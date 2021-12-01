@@ -1,4 +1,22 @@
+header {
+  background-color: orange;
+  padding: 1.2rem 1rem 1.1rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-/* Hallo */
+header h1 {
+  margin: 0;
+}
 
-.x { }
+header .menu {
+  margin: 0;
+  list-style: none;
+  display: flex;
+  margin: -.5rem;
+}
+
+header .menu li {
+  margin: 0 .5rem;
+}
