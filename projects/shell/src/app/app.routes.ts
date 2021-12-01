@@ -3,7 +3,7 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
-const URL = 'https://mfe-1.netlify.app/remoteEntry.js';
+const URL = 'http://localhost:3000/remoteEntry.js';
 
 export const APP_ROUTES: Routes = [
     {
@@ -11,9 +11,6 @@ export const APP_ROUTES: Routes = [
       component: HomeComponent,
       pathMatch: 'full'
     },
-
-    // Your route here:
-
     {
       path: 'flights',
       loadChildren: () => loadRemoteModule({

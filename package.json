@@ -4,8 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "npm run start:shell",
-    "start:shell": "ng serve shell  -o --port 5000",
-    "start:mfe1": "ng serve mfe1 -o --port 3000",
+    "start:shell": "ng serve shell --port 5000",
+    "start:mfe1": "ng serve mfe1 --port 3000",
     "start:all": "concurrently \"npm run start:shell\" \"npm run start:mfe1\" ",
     "build:shell": "ng build shell --prod",
     "build:mfe1": "ng build mfe1 --prod",

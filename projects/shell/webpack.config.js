@@ -15,7 +15,7 @@ module.exports = {
 
       // For hosts (please adjust)
       remotes: {
-          "mfe1": "mfe1@https://mfe-1.netlify.app/remoteEntry.js",
+          "mfe1": "mfe1@http://localhost:3000/remoteEntry.js",
       },
 
       shared: share({
