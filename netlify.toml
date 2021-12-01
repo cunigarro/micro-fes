@@ -1,4 +1,2 @@
-[functions]
-  directory = "functions/"
-[build]
+[context.staging]
   publish = "dist/"
