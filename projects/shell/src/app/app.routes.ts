@@ -15,10 +15,10 @@ export const APP_ROUTES: Routes = [
       path: 'cobranza',
       loadChildren: () => loadRemoteModule({
           remoteEntry: URL,
-          remoteName: 'mfe1',
+          remoteName: 'collection',
           exposedModule: './Collection'
         })
-        .then(m => m.FlightsModule)
+        .then(m => m.CollectionCoreModule)
     },
 
     {

@@ -13,4 +13,4 @@ import { CollectionInitComponent } from './init/init.component';
     CollectionInitComponent
   ]
 })
-export class FlightsModule { }
+export class CollectionCoreModule { }

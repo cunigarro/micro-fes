@@ -1,1 +1,1 @@
-declare module 'mfe1/Collection';
+declare module 'collection/Collection';
