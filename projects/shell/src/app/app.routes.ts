@@ -3,8 +3,8 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
-const COLLECTION_URL = 'http://localhost:3000/remoteEntry.js';
-const ADMIN_URL = 'http://localhost:4000/remoteEntry.js';
+const COLLECTION_URL = 'https://mfes-collection.netlify.app/remoteEntry.js';
+const ADMIN_URL = 'https://mfes-admin.netlify.app/remoteEntry.js';
 
 export const APP_ROUTES: Routes = [
     {
