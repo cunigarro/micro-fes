@@ -1,2 +1,5 @@
-[context.staging]
-  publish = "dist/"
+[Settings]
+  ID = "6dc1dff9-c62a-4f75-8685-de192df79898"
+
+[build]
+  publish = "dist/shell"
