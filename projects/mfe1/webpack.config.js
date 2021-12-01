@@ -28,7 +28,7 @@ module.exports = {
         name: "mfe1",
         filename: "remoteEntry.js",
         exposes: {
-            './Collection': './projects/mfe1/src/app/flights/flights.module.ts'
+            './Collection': './projects/mfe1/src/app/core/core.module.ts'
         },
         shared: share({
           "@angular/core": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
