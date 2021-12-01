@@ -16,6 +16,7 @@ module.exports = {
       // For hosts (please adjust)
       remotes: {
           "collection": "collection@http://localhost:3000/remoteEntry.js",
+          "admin": "admin@http://localhost:4000/remoteEntry.js"
       },
 
       shared: share({
