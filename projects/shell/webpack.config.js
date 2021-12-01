@@ -1,5 +1,6 @@
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 const mf = require("@angular-architects/module-federation/webpack");
+const Dotenv = require("dotenv-webpack");
 const share = mf.share;
 
 module.exports = {
@@ -11,12 +12,13 @@ module.exports = {
     runtimeChunk: false
   },
   plugins: [
+    new Dotenv(),
     new ModuleFederationPlugin({
 
       // For hosts (please adjust)
       remotes: {
-          "collection": "collection@http://localhost:3000/remoteEntry.js",
-          "admin": "admin@http://localhost:4000/remoteEntry.js"
+          "collection": "collection@" + process.env.COLLECTION_URL + "/remoteEntry.js",
+          "admin": "admin@" + process.env.ADMIN_URL + "/remoteEntry.js"
       },
 
       shared: share({

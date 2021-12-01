@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  collectionUrl: process.env.COLLECTION_URL,
+  adminUrl: process.env.ADMIN_URL
 };
 
 /*
