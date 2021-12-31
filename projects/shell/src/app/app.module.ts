@@ -7,12 +7,11 @@ import { APP_ROUTES } from './app.routes';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-// import { SharedLibModule } from 'projects/shared-lib/src/public-api';
+import { AuthService } from './services/auth.service';
 
 @NgModule({
   imports: [
     BrowserModule,
-    // SharedLibModule,
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot(APP_ROUTES)
@@ -22,7 +21,9 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     NotFoundComponent
   ],
-  providers: [],
+  providers: [
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

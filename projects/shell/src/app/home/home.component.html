@@ -1,14 +1,24 @@
+
 <div class="container mx-auto p-5">
-  <div class="w-full block mb-3">
-    <label class="block" for="">
-      Email
-    </label>
-    <input class="border border-black p-2" type="text">
-  </div>
-  <div class="w-full block">
+  <p class="mb-10">
+    Email: {{ userEmail }}
+  </p>
+
+  <form (ngSubmit)="onSubmit()">
+    <div class="w-full block mb-3">
       <label class="block" for="">
-        Password
+        Email
       </label>
-      <input class="border border-black p-2" type="text">
-  </div>
+      <input class="border border-black p-2" type="text" [(ngModel)]="userEmail" name="email">
+    </div>
+    <div class="w-full block mb-3">
+        <label class="block" for="">
+          Password
+        </label>
+        <input class="border border-black p-2" type="text" name="password">
+    </div>
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="submit">
+      Enviar
+    </button>
+  </form>
 </div>
