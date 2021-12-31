@@ -1,10 +1,11 @@
 import { loadRemoteModule } from '@angular-architects/module-federation';
 import { Routes } from '@angular/router';
+import { environment } from '../environments/environment';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
-const COLLECTION_URL = 'https://mfes-collection.netlify.app/remoteEntry.js';
-const ADMIN_URL = 'https://mfes-admin.netlify.app/remoteEntry.js';
+const COLLECTION_URL = environment.collectionUrl + '/remoteEntry.js'; // 'https://mfes-collection.netlify.app/remoteEntry.js';
+const ADMIN_URL = environment.adminUrl + '/remoteEntry.js'; // 'https://mfes-admin.netlify.app/remoteEntry.js';
 
 export const APP_ROUTES: Routes = [
     {

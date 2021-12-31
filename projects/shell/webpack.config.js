@@ -12,7 +12,9 @@ module.exports = {
     runtimeChunk: false
   },
   plugins: [
-    new Dotenv(),
+    new Dotenv({
+      path: './projects/shell/.env'
+    }),
     new ModuleFederationPlugin({
 
       // For hosts (please adjust)
