@@ -16,11 +16,16 @@ module.exports = {
       path: './projects/shell/.env'
     }),
     new ModuleFederationPlugin({
-
+      name: "shell",
+      filename: "remoteEntry.js",
       // For hosts (please adjust)
       remotes: {
           "collection": "collection@" + process.env.COLLECTION_URL + "/remoteEntry.js",
           "admin": "admin@" + process.env.ADMIN_URL + "/remoteEntry.js"
+      },
+
+      exposes: {
+        './userAuth': './projects/shell/src/app/services/auth.service.ts'
       },
 
       shared: share({

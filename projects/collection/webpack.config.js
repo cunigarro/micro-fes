@@ -1,7 +1,7 @@
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 const mf = require("@angular-architects/module-federation/webpack");
 const path = require("path");
-
+const Dotenv = require("dotenv-webpack");
 const share = mf.share;
 
 const sharedMappings = new mf.SharedMappings();
@@ -24,9 +24,15 @@ module.exports = {
     }
   },
   plugins: [
+    new Dotenv({
+      path: './projects/collection/.env'
+    }),
     new ModuleFederationPlugin({
         name: "collection",
         filename: "remoteEntry.js",
+        remotes: {
+          "shell": "shell@" + process.env.SHELL_URL + "/remoteEntry.js",
+        },
         exposes: {
             './Collection': './projects/collection/src/app/core/core.module.ts'
         },
